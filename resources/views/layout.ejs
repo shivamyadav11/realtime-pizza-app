@@ -16,13 +16,14 @@
 <body>
  <nav class="container mx-auto flex items-center justify-between py-4">
    <div>
-     <img class="w-14 ml-4 ml-6" src="/img/pizzalogo.png" alt="logo">
+     <a href="/"><img class="w-14 ml-4 ml-6" src="/img/pizzalogo.png" alt="logo"></a>
    </div>
    <div>
      <ul class="flex item-center">
-      <li class="ml-6"><a href="#">Menu</a></li>
-       <li class="ml-6"><a href="#">Offers</a></li>
+      <li class="ml-6"><a href="/">Menu</a></li>
+       
        <% if(user) { %>
+        <li class="ml-6"><a href="/customer/orders">My Orders</a></li>
        <li class="ml-6">
          <form id="logout" action="/logout" method="POST">
           <a onclick="document.getElementById('logout').submit()" href="#">Logout</a>

@@ -14,7 +14,7 @@ const passport = require('passport')
 const PORT = process.env.PORT || 3300
 
 // Database connection
-const url = 'mongodb://localhost:27017/pizza';
+const url = 'mongodb+srv://first:ShivaM123@cluster.l1ei5.mongodb.net/test';
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
