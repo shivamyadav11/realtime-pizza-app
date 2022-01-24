@@ -15,13 +15,14 @@ const PORT = process.env.PORT || 3300
 
 // Database connection
 const url = 'mongodb+srv://first:ShivaM123@cluster.l1ei5.mongodb.net/test';
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI || url, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
    console.log('Database connected...');
 }).on('error', function (error) {
    console.log('error is:', error);
 });
+
 
 
 
